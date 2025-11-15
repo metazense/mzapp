@@ -1,0 +1,127 @@
+.section {
+  background: var(--black);
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  text-align: center;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.description {
+  color: var(--white);
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Expandable card */
+.expandableCard {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 17px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.expandableCard:hover {
+  border-color: var(--primary-purple);
+  box-shadow: 0 4px 20px rgba(129, 66, 255, 0.1);
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--white);
+}
+
+.expandTitle {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.expandButton:hover .expandTitle {
+  color: var(--primary-purple);
+}
+
+.chevron {
+  color: #969499;
+  transition: transform 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.expandButton:hover .chevron {
+  color: var(--primary-purple);
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+/* Expanded content */
+.expandedContent {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #2a2a2a;
+  text-align: left;
+}
+
+.paragraph {
+  color: #cac9cf;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  color: #cac9cf;
+  line-height: 1.7;
+}
+
+.bullet {
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  margin-top: -0.25rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .expandTitle {
+    font-size: 1rem;
+  }
+}

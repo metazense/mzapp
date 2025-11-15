@@ -1,0 +1,186 @@
+.customerLogos {
+  background: var(--black);
+  padding: 4rem 0;
+  border-bottom: 1px solid #434045;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headerText {
+  color: #969499;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Logo carousel */
+.carouselContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 3rem;
+  align-items: center;
+}
+
+.logoItem {
+  flex-shrink: 0;
+  width: 6rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  position: relative;
+}
+
+/* Animated rings */
+.animatedRings {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring1 {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(129, 66, 255, 0.2);
+  border-radius: 50%;
+  animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ring2 {
+  position: absolute;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid rgba(170, 128, 255, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.ring3 {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid rgba(129, 66, 255, 0.4);
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+/* Wave effect background */
+.waveBackground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.wave {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 66, 255, 0.05),
+    rgba(170, 128, 255, 0.1),
+    rgba(129, 66, 255, 0.05)
+  );
+  animation: wave 3s ease-in-out infinite;
+}
+
+/* Logo content */
+.logoContent {
+  position: relative;
+  z-index: 10;
+}
+
+.textLogo {
+  color: #969499;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #434045;
+  border-radius: 8px;
+  background: rgba(67, 64, 69, 0.3);
+}
+
+.logoImage {
+  height: 1.5rem;
+  width: auto;
+  max-width: 5rem;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+
+.logoImage:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerText {
+    font-size: 1.25rem;
+  }
+}

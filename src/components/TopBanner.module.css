@@ -1,0 +1,14 @@
+.topBanner {
+  background-color: #8142ff;
+  color: var(--white);
+  text-align: center;
+  line-height: 24px;
+  padding: 4.8px 0px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.topBanner a {
+  color: var(--white);
+  text-decoration: underline;
+}

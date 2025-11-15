@@ -1,0 +1,99 @@
+/* Metazense Global Styles - Based on Style Guide */
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Urbanist:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #ffffff;
+  --primary-purple: #8142ff;
+  --purple-dark: #aa80ff;
+  --primary-lime: #daff01;
+
+  /* Neutral Grays */
+  --neutral-grey1: #29282a;
+  --neutral-grey2: #434045;
+  --neutral-grey3: #706d72;
+  --neutral-grey4: #969499;
+  --neutral-grey5: #cac9cf;
+  --neutral-grey6: #e7e5ed;
+  --neutral-grey7: #f0edf5;
+  --neutral-creme: #f7f6f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--black);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+/* Typography Utilities */
+.font-urbanist {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.font-figtree {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+  background-image: linear-gradient(
+    69deg,
+    rgb(99, 41, 215),
+    rgb(97, 41, 215) 15%,
+    rgb(191, 129, 215) 50%,
+    rgb(97, 41, 215) 80%,
+    rgb(99, 41, 215)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+}
+
+/* Gradient Text Effect for white backgrounds */
+.gradient-text-white {
+  background-image: linear-gradient(
+    69deg,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.95) 15%,
+    rgba(218, 255, 1, 1) 50%,
+    rgba(255, 255, 255, 0.95) 80%,
+    rgba(255, 255, 255, 1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-grey7);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-purple);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple-dark);
+}

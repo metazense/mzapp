@@ -1,0 +1,163 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(129, 66, 255, 0.05), rgba(170, 128, 255, 0.02));
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Purple glow effect in background */
+.purpleGlow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(129, 66, 255, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Connection lines SVG */
+.connectionLines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.dashedLine {
+  stroke: #8142ff;
+  stroke-width: 0.5;
+  stroke-dasharray: 2, 3;
+  fill: none;
+}
+
+/* Grid layout for tech icons */
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+}
+
+/* Individual tech icon */
+.techIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInScale 0.6s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.iconCard {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.iconCard:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-purple);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(129, 66, 255, 0.3);
+}
+
+/* Central hub (brain logo) */
+.centralHub {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.centralOrb {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(129, 66, 255, 0.2) 0%, rgba(129, 66, 255, 0.05) 70%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px rgba(129, 66, 255, 0.6);
+  animation: rotate 20s linear infinite;
+  position: relative;
+}
+
+.centralOrb::before {
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background: radial-gradient(circle, rgba(129, 66, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .iconCard {
+    width: 50px;
+    height: 50px;
+  }
+
+  .centralOrb {
+    width: 100px;
+    height: 100px;
+  }
+}
