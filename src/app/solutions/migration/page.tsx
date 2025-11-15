@@ -304,7 +304,7 @@ export default function MigrationPage() {
     // Step card interaction
     const cards = document.querySelectorAll(`.${styles.stepCard}`)
     cards.forEach(card => {
-      card.addEventListener('click', function() {
+      card.addEventListener('click', function(this: HTMLElement) {
         cards.forEach(c => c.classList.remove(styles.active))
         this.classList.add(styles.active)
       })
@@ -312,7 +312,7 @@ export default function MigrationPage() {
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+      anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
         e.preventDefault()
         const target = document.querySelector(this.getAttribute('href') || '')
         if (target) {
