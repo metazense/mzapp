@@ -174,7 +174,7 @@ export default function CompliancePage() {
     // Framework card interaction
     const cards = document.querySelectorAll(`.${styles.frameworkCard}`)
     cards.forEach(card => {
-      card.addEventListener('click', function() {
+      card.addEventListener('click', function(this: HTMLElement) {
         this.classList.toggle(styles.active)
       })
     })
