@@ -33,3 +33,37 @@
 .trustLogo:hover {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .trustSection {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .trustSection p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .trustLogos {
+    gap: 1.5rem;
+  }
+
+  .trustLogo {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trustSection {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .trustLogos {
+    gap: 1rem;
+  }
+
+  .trustLogo {
+    font-size: 1rem;
+  }
+}

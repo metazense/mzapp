@@ -661,6 +661,11 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+    .heroSection {
+        padding: 4rem 2rem 6rem;
+        min-height: auto;
+    }
+
     .analyzeSection,
     .insightsSection,
     .convertSection,
@@ -689,37 +694,200 @@
     .visualIcon {
         font-size: 5rem;
     }
+
+    .processSection,
+    .migrationSection,
+    .testimonialsSection,
+    .playbookSection,
+    .contactSection {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .heroSection {
+        padding: 3rem 1.5rem 4rem;
+    }
+
     .heroContent h1 {
-        font-size: 42px;
-        letter-spacing: 2px;
+        font-size: 2.25rem;
+        letter-spacing: 1px;
+        line-height: 1.15;
     }
 
     .heroContent p {
-        font-size: 16px;
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     .sectionTitle {
-        font-size: 32px;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
     }
 
     .sectionSubtitle {
-        font-size: 24px;
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
     }
 
     .playbookTitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .ctaButtons {
         flex-direction: column;
         width: 100%;
+        gap: 0.75rem;
     }
 
     .btnPrimary,
     .btnSecondary {
         width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+    }
+
+    .btnPrimary:hover,
+    .btnSecondary:hover {
+        transform: none;
+    }
+
+    .processSection,
+    .migrationSection,
+    .testimonialsSection,
+    .playbookSection,
+    .contactSection {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .analyzeSection,
+    .insightsSection,
+    .convertSection,
+    .validateSection {
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .analyzeContent h3 {
+        font-size: 1.5rem;
+    }
+
+    .analyzeContent p {
+        font-size: 1rem;
+    }
+
+    .analyzeVisual,
+    .insightsVisual,
+    .convertVisual,
+    .validateVisual {
+        min-height: 250px;
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .stepCard {
+        padding: 1.75rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .stepCard:hover {
+        transform: none;
+    }
+
+    .stepCard h3 {
+        font-size: 1.25rem;
+    }
+
+    .testimonialCard {
+        padding: 1.75rem;
+        border-radius: 16px;
+    }
+
+    .testimonialCard:hover {
+        transform: none;
+    }
+
+    .testimonialText {
+        font-size: 1rem;
+    }
+
+    .playbookForm {
+        padding: 1.75rem;
+        border-radius: 16px;
+    }
+
+    .playbookForm:hover {
+        transform: none;
+    }
+
+    .contactForm {
+        padding: 1.75rem;
+        border-radius: 16px;
+    }
+
+    /* Hide canvas on mobile for performance */
+    .graphCanvas {
+        display: none;
+    }
+
+    .animatedBackground {
+        display: none;
+    }
+
+    .swarmBackground {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .heroContent h1 {
+        font-size: 1.875rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 1.125rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .processSection,
+    .migrationSection,
+    .testimonialsSection,
+    .playbookSection,
+    .contactSection {
+        padding: 50px 0;
+    }
+
+    .analyzeVisual,
+    .insightsVisual,
+    .convertVisual,
+    .validateVisual {
+        min-height: 200px;
+    }
+
+    .stepCard {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .playbookForm {
+        padding: 1.5rem;
     }
 }

@@ -159,14 +159,127 @@
 }
 
 @media (max-width: 1024px) {
+  .ctaSection {
+    padding: 80px 0;
+  }
+
   .ctaContainer {
     grid-template-columns: 1fr;
     gap: 3rem;
+    padding: 0 2rem;
+  }
+
+  .ctaContent {
+    text-align: center;
+  }
+
+  .ctaContent h2 {
+    font-size: 2.75rem;
+  }
+
+  .ctaFeatures {
+    align-items: center;
+  }
+
+  .ctaVisual {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
+  .ctaSection {
+    padding: 60px 0;
+  }
+
+  .ctaContainer {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
   .ctaContent h2 {
     font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaFeatures {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaFeature {
+    font-size: 0.9375rem;
+  }
+
+  .ctaCheckmark {
+    width: 22px;
+    height: 22px;
+  }
+
+  .btnPrimary {
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btnPrimary:hover {
+    transform: none;
+  }
+
+  .ctaVisual {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+
+  .dashboardMockup {
+    border-radius: 10px;
+  }
+
+  .mockupHeader {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .mockupDots span {
+    width: 8px;
+    height: 8px;
+  }
+
+  .mockupTitle {
+    font-size: 0.75rem;
+  }
+
+  .mockupContent {
+    padding: 1.5rem;
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ctaSection {
+    padding: 50px 0;
+  }
+
+  .ctaContainer {
+    padding: 0 1rem;
+  }
+
+  .ctaContent h2 {
+    font-size: 1.75rem;
+  }
+
+  .ctaVisual {
+    padding: 1rem;
+  }
+
+  .mockupContent {
+    padding: 1rem;
+    min-height: 140px;
   }
 }

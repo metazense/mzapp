@@ -117,11 +117,58 @@
     padding: 3rem 0;
   }
 
+  .container {
+    padding: 0 1.5rem;
+  }
+
   .description {
-    font-size: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .expandableCard {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .expandTitle {
     font-size: 1rem;
+  }
+
+  .expandedContent {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .paragraph {
+    font-size: 0.9375rem;
+  }
+
+  .listItem {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .expandableCard {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .expandTitle {
+    font-size: 0.9375rem;
+  }
+
+  .chevron {
+    width: 18px;
+    height: 18px;
   }
 }

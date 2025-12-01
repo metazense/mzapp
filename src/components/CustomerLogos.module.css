@@ -180,7 +180,87 @@
 }
 
 @media (max-width: 768px) {
+  .customerLogos {
+    padding: 3rem 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
   .headerText {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel {
+    gap: 2rem;
+  }
+
+  .logoItem {
+    width: 5rem;
+    height: 3rem;
+  }
+
+  .ring1 {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .ring2 {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .ring3 {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .textLogo {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+  }
+
+  .logoImage {
+    height: 1.25rem;
+    max-width: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .customerLogos {
+    padding: 2.5rem 0;
+  }
+
+  .headerText {
+    font-size: 1rem;
+  }
+
+  .carousel {
+    gap: 1.5rem;
+  }
+
+  .logoItem {
+    width: 4rem;
+    height: 2.5rem;
+  }
+}
+
+/* Reduce animations on mobile for performance */
+@media (max-width: 768px) {
+  .ring1,
+  .ring2,
+  .ring3,
+  .wave {
+    animation: none;
+  }
+
+  .animatedRings {
+    display: none;
+  }
+
+  .waveBackground {
+    display: none;
   }
 }

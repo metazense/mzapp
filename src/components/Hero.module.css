@@ -129,8 +129,8 @@
 
 .deviceFrame {
   position: relative;
-  width: 28rem;
-  height: 20rem;
+  width: 33.6rem;
+  height: 24rem;
   background: linear-gradient(to bottom right, #434045, #29282a);
   border-radius: 24px;
   border: 1px solid #706d72;
@@ -229,18 +229,120 @@
 }
 
 @media (max-width: 1024px) {
+  .hero {
+    padding: 4rem 2rem 6rem;
+  }
+
   .heroContainer {
     grid-template-columns: 1fr;
     gap: 3rem;
+    text-align: center;
   }
 
   .heroContent h1 {
     font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroVisual {
+    order: -1;
+  }
+
+  .deviceFrame {
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    aspect-ratio: 1.4 / 1;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .heroContainer {
+    gap: 2rem;
+  }
+
   .heroContent h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+    line-height: 1.15;
+  }
+
+  .heroContent p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .heroButtons .btnPrimary,
+  .heroButtons .btnSecondary {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .deviceFrame {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+
+  .videoContainer {
+    border-radius: 12px;
+    padding: 0.5rem;
+  }
+
+  .video {
+    border-radius: 8px;
+  }
+
+  .floatingDot1,
+  .floatingDot2,
+  .floatingDot3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .heroContent h1 {
+    font-size: 1.875rem;
+    line-height: 1.2;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .deviceFrame {
+    border-radius: 12px;
+    padding: 0.25rem;
+  }
+
+  .videoContainer {
+    border-radius: 10px;
+    padding: 0.25rem;
+  }
+}
+
+/* Reduce stars on mobile for performance */
+@media (max-width: 768px) {
+  .stars {
+    opacity: 0.5;
   }
 }

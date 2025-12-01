@@ -117,7 +117,7 @@
 
 .featureItem {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -260,14 +260,142 @@
 }
 
 @media (max-width: 1024px) {
+  .infoSection {
+    padding: 120px 0 100px;
+  }
+
   .infoGrid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  .infoGrid.reverse {
+    direction: ltr;
+  }
+
+  .infoVisual {
+    order: -1;
+  }
+
+  .iconLarge {
+    width: 220px;
+    height: 220px;
+  }
+
+  .iconLarge svg {
+    width: 110px;
+    height: 110px;
+  }
+
+  .iconLargeXL {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 @media (max-width: 768px) {
+  .infoSection {
+    padding: 80px 0 60px;
+  }
+
+  .infoContainer {
+    padding: 0 1.5rem;
+  }
+
+  .infoGrid {
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .infoText {
+    text-align: center;
+  }
+
   .infoText h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .infoText p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: none;
+  }
+
+  .iconLarge {
+    width: 180px;
+    height: 180px;
+  }
+
+  .iconLarge svg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .iconLargeXL {
+    width: 220px;
+    height: 220px;
+  }
+
+  .featureList {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .featureItem {
+    text-align: left;
+  }
+
+  .workflowDiagram {
+    height: 200px;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btnSecondaryDark {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .calloutBox {
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoSection {
+    padding: 60px 0 50px;
+  }
+
+  .infoContainer {
+    padding: 0 1rem;
+  }
+
+  .infoText h2 {
+    font-size: 1.5rem;
+  }
+
+  .iconLarge {
+    width: 140px;
+    height: 140px;
+  }
+
+  .iconLarge svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .iconLargeXL {
+    width: 180px;
+    height: 180px;
+  }
+
+  .workflowDiagram {
+    height: 160px;
+    font-size: 0.875rem;
   }
 }

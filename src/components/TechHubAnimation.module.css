@@ -143,21 +143,116 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    min-height: 350px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .iconCard {
+    width: 60px;
+    height: 60px;
+  }
+
+  .centralOrb {
+    width: 120px;
+    height: 120px;
+  }
+
+  .purpleGlow {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    min-height: 300px;
+  }
+
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 1rem;
+    gap: 0.75rem;
     padding: 1rem;
   }
 
   .iconCard {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+  }
+
+  .iconCard:hover {
+    transform: none;
   }
 
   .centralOrb {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .centralOrb::before {
+    width: 110px;
+    height: 110px;
+  }
+
+  .purpleGlow {
+    width: 150px;
+    height: 150px;
+    filter: blur(40px);
+  }
+
+  /* Reduce animations for mobile performance */
+  .purpleGlow {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .centralOrb {
+    animation: none;
+  }
+
+  .centralOrb::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-height: 260px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .iconCard {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 0.25rem;
+  }
+
+  .centralOrb {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 30px rgba(129, 66, 255, 0.4);
+  }
+
+  .centralOrb::before {
+    width: 90px;
+    height: 90px;
+  }
+
+  .purpleGlow {
+    display: none;
   }
 }

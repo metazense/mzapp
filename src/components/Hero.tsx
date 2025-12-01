@@ -5,10 +5,12 @@ import styles from './Hero.module.css'
 
 export default function Hero() {
   useEffect(() => {
-    // Generate stars
+    // Generate stars - fewer on mobile for performance
     const starsContainer = document.getElementById('stars')
     if (starsContainer) {
-      for (let i = 0; i < 50; i++) {
+      const isMobile = window.innerWidth <= 768
+      const starCount = isMobile ? 20 : 50
+      for (let i = 0; i < starCount; i++) {
         const star = document.createElement('div')
         star.className = styles.star
         star.style.left = Math.random() * 100 + '%'
