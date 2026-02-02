@@ -1,5 +1,6 @@
+'use client'
+
 import styles from './CTASection.module.css'
-import TechHubAnimation from './TechHubAnimation'
 
 export default function CTASection() {
   return (
@@ -25,17 +26,18 @@ export default function CTASection() {
           <a href="#demo" className={styles.btnPrimary}>Book Your Demo →</a>
         </div>
         <div className={styles.ctaVisual}>
-          <div className={styles.dashboardMockup}>
-            <div className={styles.mockupHeader}>
-              <div className={styles.mockupDots}>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <div className={styles.mockupTitle}>Digital Blueprint Dashboard</div>
-            </div>
-            <div className={styles.mockupContent}>
-              <TechHubAnimation />
+          <div className={styles.videoFrame}>
+            <div className={styles.videoWrapper}>
+              <video
+                className={styles.ctaVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label="See Your Digital Blueprint in Action"
+              >
+                <source src="/ecosystem_animation.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>

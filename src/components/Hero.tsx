@@ -48,9 +48,9 @@ export default function Hero() {
                   loop
                   muted
                   playsInline
-                  aria-label="Metazense platform demonstration video"
+                  aria-label="Metazense ecosystem animation"
                 >
-                  <source src="/analytics-hub.webm" type="video/webm" />
+                  <source src="/ecosystem_animation.mp4" type="video/mp4" />
                   <div className={styles.videoFallback}>
                     Video not supported
                   </div>

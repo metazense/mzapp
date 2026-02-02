@@ -95,10 +95,9 @@
 }
 
 .ctaVisual {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboardMockup {
@@ -158,6 +157,38 @@
   height: auto;
 }
 
+/* Video frame styles - matches Hero section */
+.videoFrame {
+  position: relative;
+  width: 33.6rem;
+  height: 24rem;
+  background: linear-gradient(to bottom right, #434045, #29282a);
+  border-radius: 24px;
+  border: 1px solid #706d72;
+  box-shadow: 0 20px 60px rgba(129, 66, 255, 0.15);
+  padding: 0.5rem;
+}
+
+.videoWrapper {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.ctaVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
 @media (max-width: 1024px) {
   .ctaSection {
     padding: 80px 0;
@@ -181,9 +212,20 @@
     align-items: center;
   }
 
-  .ctaVisual {
-    max-width: 500px;
-    margin: 0 auto;
+  .videoFrame {
+    width: 100%;
+    max-width: 28rem;
+    height: auto;
+    aspect-ratio: 1.4 / 1;
+    border-radius: 20px;
+  }
+
+  .videoWrapper {
+    border-radius: 12px;
+  }
+
+  .ctaVideo {
+    border-radius: 10px;
   }
 }
 
@@ -233,11 +275,6 @@
     transform: none;
   }
 
-  .ctaVisual {
-    padding: 1.5rem;
-    border-radius: 16px;
-  }
-
   .dashboardMockup {
     border-radius: 10px;
   }
@@ -259,6 +296,24 @@
     padding: 1.5rem;
     min-height: 180px;
   }
+
+  .videoFrame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1.4 / 1;
+    border-radius: 16px;
+    padding: 0.375rem;
+  }
+
+  .videoWrapper {
+    border-radius: 12px;
+    padding: 0.25rem;
+  }
+
+  .ctaVideo {
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -274,12 +329,25 @@
     font-size: 1.75rem;
   }
 
-  .ctaVisual {
-    padding: 1rem;
-  }
-
   .mockupContent {
     padding: 1rem;
     min-height: 140px;
+  }
+
+  .videoFrame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.4 / 1;
+    border-radius: 12px;
+    padding: 0.25rem;
+  }
+
+  .videoWrapper {
+    border-radius: 10px;
+    padding: 0.25rem;
+  }
+
+  .ctaVideo {
+    border-radius: 6px;
   }
 }

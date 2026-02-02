@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './InfoSections.module.css'
 
@@ -56,13 +58,13 @@ export default function InfoSections() {
         <div className={styles.infoContainer}>
           <div className={`${styles.infoGrid} ${styles.reverse}`}>
             <div className={styles.infoVisual}>
-              <div className={styles.iconLargeXL}>
+              <div className={styles.imageFrame}>
                 <Image
-                  src="/images/brain-metazense-white.png"
-                  alt="Metazense Digital Blueprint - AI Brain"
-                  width={518}
-                  height={518}
-                  style={{ maxWidth: '100%', height: 'auto', zIndex: 1 }}
+                  src="/images/why_metazense_digital_nano_v2.jpeg"
+                  alt="Why Metazense Digital Blueprint"
+                  width={672}
+                  height={480}
+                  className={styles.infoImage}
                 />
               </div>
             </div>
@@ -90,8 +92,6 @@ export default function InfoSections() {
           </div>
         </div>
       </section>
-
-      {/* Info Section 3: Remove - This section is removed */}
     </>
   )
 }

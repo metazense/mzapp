@@ -332,10 +332,22 @@ export default function MigrationPage() {
           <canvas id="graph-canvas" className={styles.graphCanvas}></canvas>
         </div>
         <div className={styles.heroContent}>
+          <div className={styles.heroImageFrame}>
+            <video
+              className={styles.heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="DeepMig - AI-Powered Migration Tool"
+            >
+              <source src="/images/deepmig.mp4" type="video/mp4" />
+            </video>
+          </div>
           <h1 className="font-urbanist">DEEPMIG</h1>
           <p>AI-Powered Migration from Legacy to Modern Frameworks</p>
           <div className={styles.ctaButtons}>
-            <Link href="#demo" className={styles.btnPrimary}>Try DeepMig Live</Link>
+            <a href="https://github.com/metazense/deepmig" className={styles.btnPrimary} target="_blank" rel="noopener noreferrer">Try DeepMig Live</a>
             <Link href="#contact" className={styles.btnSecondary}>Get in Touch</Link>
           </div>
         </div>
@@ -361,14 +373,36 @@ export default function MigrationPage() {
               </div>
             </div>
             <div className={styles.analyzeVisual}>
-              <div className={styles.visualIcon}>🗺️</div>
+              <div className={styles.stepImageFrame}>
+                <video
+                  className={styles.stepVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Blueprint Your Legacy System - Code Analysis"
+                >
+                  <source src="/images/metazcode.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </div>
 
           {/* Step 2: Strategize */}
           <div className={styles.insightsSection}>
             <div className={`${styles.analyzeVisual} ${styles.insightsVisual}`}>
-              <div className={styles.visualIcon}>📊</div>
+              <div className={styles.stepImageFrame}>
+                <video
+                  className={styles.stepVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Strategize the Migration"
+                >
+                  <source src="/images/migration-plan-v2.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
             <div className={styles.analyzeContent}>
               <div className={styles.stepNumber}>02</div>
@@ -404,20 +438,42 @@ export default function MigrationPage() {
               </div>
             </div>
             <div className={`${styles.analyzeVisual} ${styles.convertVisual}`}>
-              <div className={styles.visualIcon}>⚙️</div>
+              <div className={styles.stepImageFrame}>
+                <video
+                  className={styles.stepVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Convert and Modernize - Migration Execution"
+                >
+                  <source src="/images/migration-execution.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </div>
 
           {/* Step 4: Validate */}
           <div className={styles.validateSection}>
             <div className={`${styles.analyzeVisual} ${styles.validateVisual}`}>
-              <div className={styles.visualIcon}>✅</div>
+              <div className={styles.stepImageFrame}>
+                <video
+                  className={styles.stepVideo}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label="Validate and Accelerate - Migration Validation"
+                >
+                  <source src="/images/migration-validation.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
             <div className={styles.analyzeContent}>
               <div className={styles.stepNumber}>04</div>
               <h3 className="font-urbanist">Validate and Accelerate</h3>
               <p>Migration isn't complete until it's verified. Our final stage delivers a comprehensive validation report, confirming the fidelity of the transformation against the original blueprint. We pinpoint any remaining edge cases or areas that require final human oversight, providing a clear and actionable handover that empowers your team to test, finalize, and deploy the new system faster.</p>
-              <Link href="#demo" className={styles.ctaLink}>Start Your Migration Journey →</Link>
+              <a href="https://github.com/metazense/deepmig-tutorial" className={styles.ctaLink} target="_blank" rel="noopener noreferrer">Start Your Migration Journey →</a>
             </div>
           </div>
         </div>
@@ -431,15 +487,21 @@ export default function MigrationPage() {
           <div className={styles.migrationSteps}>
             <div className={`${styles.stepCard} ${styles.active}`}>
               <h3>Assess & Plan</h3>
-              <p>Utilize the DeepMig Parser Agent for a comprehensive overview of your legacy environment. Scope your project accurately, excluding outdated code. Use detailed insights to plan a phased migration and estimate resources precisely.</p>
+              <p className={styles.stepCardIntro}>Establish a rock-solid foundation for success by defining your goals and scope.</p>
+              <p><strong>Commit to the Golden Rule: Lift and Shift.</strong> Your primary goal must be achieving perfect parity between the old and new systems. Avoid the trap of trying to fix or re-architect during the migration—save improvements for later.</p>
+              <p><strong>Define Your Scope.</strong> Inventory all assets and decide on your rollout strategy. For large projects, plan a phased migration by tackling one high-impact business domain (e.g., Finance or Marketing) at a time to create manageable wins.</p>
             </div>
             <div className={styles.stepCard}>
               <h3>Proof of Value (PoV)</h3>
-              <p>Run a pilot migration with the Planner and Converter agents. Validate the AI-powered approach and demonstrate value before full-scale deployment.</p>
+              <p className={styles.stepCardIntro}>De-risk your project and build momentum by executing a pilot migration on a focused area.</p>
+              <p><strong>Execute a Pilot Domain.</strong> Select the first business domain from your plan (e.g., Finance) and use it as your PoV. The goal is to prove the process, validate the technology, and demonstrate a quick, successful outcome to stakeholders.</p>
+              <p><strong>Automate and Validate.</strong> Use an AI Migration Agent on this smaller scope to automate the heavy lifting of code translation and data reconciliation. This proves you can achieve parity reliably before committing to the full-scale project.</p>
             </div>
             <div className={styles.stepCard}>
               <h3>Scale Out</h3>
-              <p>Execute the full migration with confidence. The Reviewer Agent ensures quality while you maintain control through human validation at every step.</p>
+              <p className={styles.stepCardIntro}>Execute the full migration with the confidence and efficiency gained from your successful PoV.</p>
+              <p><strong>Replicate and Accelerate.</strong> Apply the proven process from your PoV to the remaining business domains. The AI agent scales the automated translation and validation, compressing a year-long project into weeks.</p>
+              <p><strong>Go Live with Confidence.</strong> Run both systems in parallel and use continuous data validation to provide undeniable proof of parity.</p>
             </div>
           </div>
         </div>
@@ -499,23 +561,30 @@ export default function MigrationPage() {
               <div className={styles.playbookForm}>
                 <h3 className="font-urbanist">Download Your Playbook</h3>
                 <p className={styles.playbookFormSubtitle}>Enter your company email to receive instant access</p>
-                <form>
+                <form
+                  action="https://formspree.io/f/xrelogvj"
+                  method="POST"
+                >
+                  <input type="hidden" name="_next" value="https://drive.google.com/file/d/1GJdRiWm5nHmgIO47nSaPb29VYXrx3Tox/view?usp=drive_link" />
+                  <input type="hidden" name="_subject" value="New Playbook Download Request" />
                   <div className={styles.formGroup}>
                     <label className={styles.formLabel}>Company Email</label>
-                    <input 
-                      type="email" 
-                      className={styles.formInput} 
-                      placeholder="email@company.com" 
-                      required 
+                    <input
+                      type="email"
+                      name="email"
+                      className={styles.formInput}
+                      placeholder="email@company.com"
+                      required
                     />
                   </div>
                   <div className={styles.formGroup}>
                     <label className={styles.formLabel}>Company Name</label>
-                    <input 
-                      type="text" 
-                      className={styles.formInput} 
-                      placeholder="Your Company" 
-                      required 
+                    <input
+                      type="text"
+                      name="company"
+                      className={styles.formInput}
+                      placeholder="Your Company"
+                      required
                     />
                   </div>
                   <button type="submit" className={`${styles.btnPrimary} ${styles.formSubmit}`}>
@@ -537,19 +606,20 @@ export default function MigrationPage() {
           <h2 className={`${styles.sectionTitle} font-urbanist`}>Looking to transform your migration journey?</h2>
           <p className={styles.sectionSubtitle}>Share your email and intended use for DeepMig, and our team will reach out to assist you.</p>
           <div className={styles.contactForm}>
-            <form>
+            <form
+              action="https://formspree.io/f/xrelogvj"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New DeepMig Contact Request" />
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>Your work email</label>
-                <input type="email" className={styles.formInput} placeholder="email@company.com" required />
+                <input type="email" name="email" className={styles.formInput} placeholder="email@company.com" required />
               </div>
               <div className={styles.formGroup}>
                 <label className={styles.formLabel}>How are you planning to use DeepMig?</label>
-                <textarea className={`${styles.formInput} ${styles.formTextarea}`} placeholder="Tell us about your migration needs..." required></textarea>
+                <textarea name="message" className={`${styles.formInput} ${styles.formTextarea}`} placeholder="Tell us about your migration needs..." required></textarea>
               </div>
               <button type="submit" className={`${styles.btnPrimary} ${styles.formSubmit}`}>Sign-Up</button>
-              <div className={styles.formFooter}>
-                Already registered? Just <a href="#signin">Sign-In</a>!
-              </div>
             </form>
           </div>
         </div>

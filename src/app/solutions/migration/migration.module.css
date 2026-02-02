@@ -35,6 +35,54 @@
     position: relative;
     z-index: 1;
     max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.heroImageFrame {
+    position: relative;
+    width: 80%;
+    max-width: 960px;
+    background: linear-gradient(135deg, #1a1a2e, #16162a);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow:
+        0 0 0 1px rgba(129, 66, 255, 0.4),
+        0 4px 20px rgba(129, 66, 255, 0.15),
+        0 20px 60px rgba(129, 66, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.heroImageFrame::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, rgba(129, 66, 255, 0.6), rgba(170, 128, 255, 0.3), rgba(129, 66, 255, 0.6));
+    border-radius: 9px;
+    z-index: -1;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.heroVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .heroContent h1 {
@@ -62,8 +110,6 @@
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2.5rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
     font-weight: 400;
 }
 
@@ -306,6 +352,48 @@
 @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 0.5; }
     50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* Step Image Frame - Purple glow styling like hero */
+.stepImageFrame {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    background: linear-gradient(135deg, #1a1a2e, #16162a);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(129, 66, 255, 0.4),
+        0 4px 20px rgba(129, 66, 255, 0.15),
+        0 20px 60px rgba(129, 66, 255, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.stepImageFrame::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, rgba(129, 66, 255, 0.6), rgba(170, 128, 255, 0.3), rgba(129, 66, 255, 0.6));
+    border-radius: 9px;
+    z-index: -1;
+}
+
+.stepImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.stepVideo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .featureTags {
@@ -666,6 +754,10 @@
         min-height: auto;
     }
 
+    .heroImageFrame {
+        max-width: 100%;
+    }
+
     .analyzeSection,
     .insightsSection,
     .convertSection,
@@ -695,6 +787,10 @@
         font-size: 5rem;
     }
 
+    .stepImageFrame {
+        max-width: 100%;
+    }
+
     .processSection,
     .migrationSection,
     .testimonialsSection,
@@ -711,6 +807,11 @@
 @media (max-width: 768px) {
     .heroSection {
         padding: 3rem 1.5rem 4rem;
+    }
+
+    .heroImageFrame {
+        border-radius: 12px;
+        margin-bottom: 2rem;
     }
 
     .heroContent h1 {
