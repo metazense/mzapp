@@ -766,6 +766,18 @@
         gap: 40px;
     }
 
+    /* Fix mobile order: always show text before video */
+    .analyzeContent {
+        order: 1;
+    }
+
+    .analyzeVisual,
+    .insightsVisual,
+    .convertVisual,
+    .validateVisual {
+        order: 2;
+    }
+
     .migrationSteps {
         grid-template-columns: 1fr;
     }
