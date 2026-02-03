@@ -41,8 +41,9 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h4>Open Source</h4>
             <ul className={styles.footerLinks}>
-              <li><a href="#">cnquery</a></li>
-              <li><a href="#">cnspec</a></li>
+              <li><a href="https://github.com/metazense/mzcode" target="_blank" rel="noopener noreferrer">mzcode</a></li>
+              <li><a href="https://github.com/metazense/deepmig" target="_blank" rel="noopener noreferrer">deepmig</a></li>
+              <li><a href="https://github.com/metazense/deepcom" target="_blank" rel="noopener noreferrer">deepcom</a></li>
             </ul>
           </div>
 
