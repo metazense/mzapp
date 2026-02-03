@@ -562,10 +562,23 @@ export default function MigrationPage() {
                 <h3 className="font-urbanist">Download Your Playbook</h3>
                 <p className={styles.playbookFormSubtitle}>Enter your company email to receive instant access</p>
                 <form
-                  action="https://formspree.io/f/xrelogvj"
-                  method="POST"
+                  onSubmit={async (e) => {
+                    e.preventDefault()
+                    const form = e.target as HTMLFormElement
+                    const formData = new FormData(form)
+                    try {
+                      await fetch('https://formspree.io/f/xrelogvj', {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                      })
+                      window.open('https://drive.google.com/file/d/1GJdRiWm5nHmgIO47nSaPb29VYXrx3Tox/view?usp=drive_link', '_blank')
+                      form.reset()
+                    } catch (error) {
+                      alert('Something went wrong. Please try again.')
+                    }
+                  }}
                 >
-                  <input type="hidden" name="_next" value="https://drive.google.com/file/d/1GJdRiWm5nHmgIO47nSaPb29VYXrx3Tox/view?usp=drive_link" />
                   <input type="hidden" name="_subject" value="New Playbook Download Request" />
                   <div className={styles.formGroup}>
                     <label className={styles.formLabel}>Company Email</label>
