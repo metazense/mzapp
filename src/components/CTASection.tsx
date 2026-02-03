@@ -36,7 +36,7 @@ export default function CTASection() {
                 playsInline
                 aria-label="See Your Digital Blueprint in Action"
               >
-                <source src="/ecosystem_animation.mp4" type="video/mp4" />
+                <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/ecosystem_animation.mp4" type="video/mp4" />
               </video>
             </div>
           </div>

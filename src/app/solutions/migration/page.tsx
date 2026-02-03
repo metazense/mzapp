@@ -341,7 +341,7 @@ export default function MigrationPage() {
               playsInline
               aria-label="DeepMig - AI-Powered Migration Tool"
             >
-              <source src="/images/deepmig.mp4" type="video/mp4" />
+              <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/deepmig.mp4" type="video/mp4" />
             </video>
           </div>
           <h1 className="font-urbanist">DEEPMIG</h1>
@@ -382,7 +382,7 @@ export default function MigrationPage() {
                   playsInline
                   aria-label="Blueprint Your Legacy System - Code Analysis"
                 >
-                  <source src="/images/metazcode.mp4" type="video/mp4" />
+                  <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/metazcode.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -400,7 +400,7 @@ export default function MigrationPage() {
                   playsInline
                   aria-label="Strategize the Migration"
                 >
-                  <source src="/images/migration-plan-v2.mp4" type="video/mp4" />
+                  <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/migration-plan-v2.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -447,7 +447,7 @@ export default function MigrationPage() {
                   playsInline
                   aria-label="Convert and Modernize - Migration Execution"
                 >
-                  <source src="/images/migration-execution.mp4" type="video/mp4" />
+                  <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/migration-execution.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -465,7 +465,7 @@ export default function MigrationPage() {
                   playsInline
                   aria-label="Validate and Accelerate - Migration Validation"
                 >
-                  <source src="/images/migration-validation.mp4" type="video/mp4" />
+                  <source src="https://pub-57f689a05a7f44538384bbef252a8947.r2.dev/migration-validation.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
